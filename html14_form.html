@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>폼 입력양색</title>
+</head>
+<body>
+<!-- get : queryString(URL에 매핑된다)
+     post : URL매핑되지 않는다
+-->
+<form action="result.html" method="get">
+<fieldset>
+	<legend>**인적사항 입력</legend>
+	<table>
+		<tr>
+			<td><label for="name">이름</label></td>
+			<td><input type="text" name="irum" 이름을 입력하시오" required="required" autofocus="autofocus"></td>   <!--required:반드시 채워야함 -->
+		</tr>	
+	
+		<tr>
+			<td><label for="email">이메일</label></td>
+			<td><input type="email" name="mail" placeholder="이메일을 입력하시오"></td>
+		</tr>
+
+		<tr>
+			<td><label for="phone">전화</label></td>
+			<td><input type="text" name="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="###-####-####" placeholder="전화번호를 입력하시오"></td>
+		</tr>
+
+		<tr>
+			<td><label for="photo">파일선택</label></td>
+			<td><input type="file" accept="image/jpg, image/gif"></td>
+		</tr>
+	</table>
+
+	<input type="submit" value="제출">
+	<input type="reset" value="취소">
+</fieldset>
+</form>
+
+</body>
+</html>
+<!-- 
+   form요소는 웹 문서가 서로 상호작용을 할 수 있도록 하는 역할을 담당한다.
+   <form>
+     클라이언트로 부터 입력받아 서버로 보내기 위한 요소를 작성한다.
+   </form>
+   
+   action 속성 : form의 내용을 처리하기 위한 서버URI을 설정한다.
+   method 속성 : 클라이언트의 데이터를 서버로 보내기 위한 방법을 설정한다.
+        값 get은 폼의 내용을 서버로 전송할때 255바이트 이하까지만 전송할 수 있고
+         주소표시줄에 전송되는 값이 노출이 된다.
+        값 post은 폼의 내용을 서버로 전송할때 255바이트보다 크거나 보안이 필요한 데이터를
+         보낼때 설정한다.
+    enctype: application/x-www-form-urlencoded
+             multipart/form-data : 첨부파일을 전송할때
+         
+   fieldset 요소 : 여러개의 폼 요소를 그룹화 할때 사용한다.
+   legend 요소 : 폼요소 그룹화 설정된 것에 대한 제목을 지정한다.
+   label요소 :  텍스트와 폼요소의 상관관계를 설정한다.
+   for속성 : 속성 값으로 포커스를 이동하기 위해서 설정한다.
+ -->

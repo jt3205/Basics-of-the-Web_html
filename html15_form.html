@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table{
+			border-style: solid;
+			border-collapse: collapse;
+		}
+		td{
+			border-style: dotted;
+			border-collapse: collapse;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+<form action="result.html" method="get">
+<table border="1">
+	<tr>
+		<td>
+			아이디:<input type="text" name="name" size="10"><br>
+			비밀번호:<input type="password" name="pwd" size="10"><br>
+			주민번호:<input type="text" name="ssn1" size="6" maxlength="6">
+				 - <input type="text" name="ssn2" size="7" maxlength="7">
+			<br>
+		</td>
+
+		<td><b>성별</b><br>
+			<input type="radio" name="gender" value="man" checked>남자
+			<input type="radio" name="gender" value="woman">여자
+			<br><br>
+
+			<b>좋아하는 과목</b><br>
+			<input type="checkbox" name="subject" value="kor">국어
+			<input type="checkbox" name="subject" value="eng">영어
+			<input type="checkbox" name="subject" value="mat">수학
+		</td>
+	</tr>
+	<tr>
+		<td> 
+			<!--리스트박스-->
+			<b>사용중인 운영체제는?</b><br>
+			<select name="OS" size="3" multiple>
+				<option value="windows">윈도우7</option>
+				<option value="linux">리눅스</option>
+				<option value="solrais">솔라리스</option>
+				<option value="mac">맥</option>
+			</select><br>
+
+			<!--콤보박스-->
+			<b>사용가능한 오피스는?</b><br>
+			<select name="OA">
+				<option value="word">워드</option>
+				<option value="excel">엑셀</option>
+				<option value="ppt">파워포인트</option>
+				<option value="access">엑세스</option>
+			</select>
+		</td>
+		<td>
+			<b>기타사항</b><br>
+			<textarea rows="7" cols="30" name="exam"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+			<input type="button" value="목록">&nbsp;&nbsp;&nbsp;
+			<input type="submit" value="확인">&nbsp;&nbsp;&nbsp;
+			<input type="reset" value="취소">
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
+
+
+
+
+
+
